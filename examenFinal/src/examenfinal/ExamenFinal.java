@@ -26,7 +26,7 @@ public class ExamenFinal {
  
             System.out.println("1. Comparación de 2 números");
             System.out.println("2. Piramide Impar");
-            System.out.println("3. Opcion 3");
+            System.out.println("3. Vacas Lecheras");
             System.out.println("4. Salir");
  
             try {
@@ -51,6 +51,7 @@ public class ExamenFinal {
                         break;
                     case 3:
                         System.out.println("\n" + "Has seleccionado la opcion 3");
+                        lechero();
                         break;
                     case 4:
                         salir = true;
@@ -91,6 +92,26 @@ public class ExamenFinal {
             }
             System.out.println("\n");
         }
+    }
+    
+    static void lechero(){
+        //Para 8 vacas
+        int[] vacas = new int[8];
+        int[] leche = new int[8];
+        System.out.println("La cantidad de vacas disponibles para la venta son: " + vacas.length + "\n");
+        vacas[0] = 223; leche[0] = 30;
+        vacas[1] = 243; leche[1] = 34;
+        vacas[2] = 100; leche[2] = 28;
+        vacas[3] = 200; leche[3] = 45;
+        vacas[4] = 200; leche[4] = 31;
+        vacas[5] = 155; leche[5] = 50;
+        vacas[6] = 300; leche[6] = 29;
+        vacas[7] = 150; leche[7] = 1;
+        
+        int totalLeche = leche[1] + leche[3] + leche[5] +leche[6] + leche[2];
+        System.out.println("El peso de las vacas a comprar: " + vacas[1] + ", " + vacas[3] + ", " + vacas[5] + ", " + vacas[6] + ", " + vacas[2]);
+        System.out.println("El total de litros de leche que generan son: " + totalLeche + "\n");
+        
     }
     
 }
